@@ -24,7 +24,22 @@ const routes = [
       {
         path: '/user/forget',
         name: 'forget',
-        component: () => import('../views/forget/index.vue')
+        redirect: '/user/forget/step1',
+        component: () => import('../views/forget/index.vue'),
+        children: [
+          {
+            path: '/user/forget/step1',
+            component: () => import('../views/forget/step1.vue')
+          },
+          {
+            path: '/user/forget/step2',
+            component: () => import('../views/forget/step2.vue')
+          },
+          {
+            path: '/user/forget/step3',
+            component: () => import('../views/forget/step3.vue')
+          }
+        ]
       }
     ]
   },

@@ -1,46 +1,14 @@
 <template>
-  <div class="registerWrap">
-    <form-steps :stepsList="stepsList" :active="active"></form-steps>
-    <div class="register">
-      <div class="title">{{ stepsList[active] }}</div>
-      <router-view></router-view>
-    </div>
+  <div class="forget">
+    <h1>This is an forget page</h1>
   </div>
 </template>
 
 <script>
-import FormSteps from "@/components/Steps";
 export default {
-  name: "registerPage",
-  components: { FormSteps },
+  name: "forgetPage",
   data() {
-    return {
-      stepsList: ["安全验证", "重置密码", "完成"],
-      active: 0,
-    };
+    return {};
   },
 };
 </script>
-<style lang="less" scoped>
-.registerWrap {
-  width: 1200px;
-  margin: 0 auto;
-  margin-top: 32px;
-}
-
-.register {
-  width: 800px;
-  height: 400px;
-  margin: 32px auto;
-  background: #fff;
-  padding: 32px;
-  .title {
-    height: 28px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #409eff;
-    line-height: 28px;
-    margin-bottom: 32px;
-  }
-}
-</style>
